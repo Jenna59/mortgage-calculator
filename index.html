@@ -1,61 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Mortgage repayment calculator</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+    <title>Frontend Mentor | Mortgage repayment calculator</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution { font-size: 11px; text-align: center; }
+      .attribution a { color: hsl(228, 45%, 44%); }
+    </style>
+  </head>
+  <body>
+    <main>
+      <form>
+        <h2>Mortgage Calculator</h2>
+        Clear All
+        
+          <label for="amount">Mortgage Amount</label>
+            <input type="text" />
+          <label for="term">Mortgage Term</label>
+            <input type="text" />
+          <label for="rate">Interest Rate</label>
+            <input type="text" />
+            
+        <fieldset>
+          <label>
+            Mortgage Type
+          </label>
+          <label>
+            Repayment
+          </label>
+          <input type="radio" />
+          <label>
+            Interest Only
+          </label>
+          <input type="radio" />
+        </fieldset>
 
-  Mortgage Calculator
-  Clear All
+        <button>Calculate Repayments</button>
 
-  Mortgage Amount
+      </form>
+      <!-- Empty results start -->
+      <section>
 
-  Mortgage Term
+        <img src="./assets/images/illustration-empty.svg" alt=""/>
+        
+        <h2>Results shown here</h2>
+          <p>
+            Complete the form and click “calculate repayments” to see what 
+            your monthly repayments would be.
+          </p>
 
-  Interest Rate
+        <!-- Empty results end -->
 
-  Mortgage Type
-  Repayment
-  Interest Only
+        <!-- Completed results start -->
 
-  Calculate Repayments
+  <!--
+          Your results
+    
+          Your results are shown below based on the information you provided. 
+          To adjust the results, edit the form and click “calculate repayments” again.
+    
+          Your monthly repayments
+    
+          Total you'll repay over the term
+  -->
+      </section>
+    </main>
 
-  <!-- Empty results start -->
-
-  Results shown here
-
-  Complete the form and click “calculate repayments” to see what 
-  your monthly repayments would be.
-
-  <!-- Empty results end -->
-
-  <!-- Completed results start -->
-
-  Your results
-
-  Your results are shown below based on the information you provided. 
-  To adjust the results, edit the form and click “calculate repayments” again.
-
-  Your monthly repayments
-
-  Total you'll repay over the term
-
-  <!-- Completed results end -->
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <footer>  
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+        Coded by <a href="#">Your Name Here</a>.
+      </div>
+    </footer>
+  </body>
 </html>

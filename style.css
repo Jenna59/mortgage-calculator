@@ -1,0 +1,60 @@
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+form,
+section {
+  padding: 1rem;
+}
+
+html {
+  /* border: solid 4px lime; */
+  height: 100vh;
+}
+
+body,
+main {
+  height: inherit;
+}
+
+body {
+  /* slate 100 */
+  background-color: hsl(202, 86%, 94%);
+  /* border: solid 4px hotpink; */
+}
+
+form {
+  background-color: hsl(0, 0%, 100%);
+  /* border: solid 4px red; */
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+  /*slate 900 */
+  background-color: hsl(202, 55%, 16%);
+  /* border: solid 4px yellow; */
+}
+
+img {
+  height: 60%;
+}
+
+@media (width <= 375px) {
+  form {
+    height: 65%;
+  }
+
+  section {
+    height: 35%;
+  }
+
+  img {
+    height: 60%;
+  }
+}
