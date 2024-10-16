@@ -17,19 +17,20 @@ html {
   height: 100vh;
 }
 
-body,
-main {
-  height: inherit;
-}
-
 body {
   /* slate 100 */
   background-color: hsl(202, 86%, 94%);
+  font-family: 'Plus Jakarta Sans';
+  font-size: 16px;
+  height: inherit;
   /* border: solid 4px hotpink; */
 }
 
-form {
+main {
   background-color: hsl(0, 0%, 100%);
+}
+
+form {
   /* border: solid 4px red; */
   display: flex;
   flex-direction: column;
@@ -38,23 +39,82 @@ form {
 section {
   /*slate 900 */
   background-color: hsl(202, 55%, 16%);
+  text-align: center;
   /* border: solid 4px yellow; */
+}
+
+section h2 {
+  color: hsl(0, 0%, 100%);
+}
+
+section p {
+  color: hsl(200, 26%, 54%)
 }
 
 img {
   height: 60%;
 }
 
+button {
+  font-weight: 700;
+  height: 2.5rem;
+  background-color: hsl(61, 70%, 52%);
+  border-radius: 80px;
+  border: none;
+}
+
+@media (width >= 1440px) {
+
+  body {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-areas:
+      ". . ."
+      ". main ."
+      "footer footer footer"
+  }
+
+  main {
+    grid-area: main;
+    width: 1440px;
+    display: flex;
+  }
+
+  form,
+  section {
+    width: 50%;
+    padding: 2rem;
+  }
+  
+  main {
+    border-bottom-left-radius: 16px;
+    border-top-left-radius: 16px;
+  }
+
+  section {
+    border-bottom-right-radius: 16px;
+    border-top-right-radius: 16px;
+    border-bottom-left-radius: 54px;
+  }
+
+  footer {
+    grid-area: footer;
+  }
+}
+
 @media (width <= 375px) {
+
+  main {
+    height: inherit;
+  }
+
   form {
     height: 65%;
+    padding-top: 1.5rem;
   }
 
   section {
     height: 35%;
-  }
-
-  img {
-    height: 60%;
+    padding-bottom: 1.5rem;
   }
 }
